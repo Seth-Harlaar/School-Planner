@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/course_adapter_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="left"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:elevation="2dp"
+        android:background="@drawable/course_header_background">
+
+        <ImageView
+            android:id="@+id/imageView"
+            app:srcCompat="@drawable/course_color_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"/>
+
+        <TextView
+            android:id="@+id/course_adapter_course_code"
+            android:text="TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="0.5"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"/>
+
+
+        <TextView
+            android:id="@+id/course_adapter_course_title"
+            android:text="TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>

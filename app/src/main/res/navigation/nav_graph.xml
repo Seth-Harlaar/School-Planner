@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_page">
+
+    <fragment
+        android:id="@+id/grades_page_frag"
+        android:name="com.example.schoolplanner2.fragments.grades_page"
+        android:label="fragment_grades_page_frag"
+        tools:layout="@layout/fragment_grades_page" >
+        <action
+            android:id="@+id/action_grades_page_frag_to_new_class_page"
+            app:destination="@id/new_class_page" />
+        <action
+            android:id="@+id/action_grades_page_frag_to_view_course_page"
+            app:destination="@id/view_course_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/chart_page"
+        android:name="com.example.schoolplanner2.fragments.chart_page"
+        android:label="fragment_chart_page"
+        tools:layout="@layout/fragment_chart_page" />
+    <fragment
+        android:id="@+id/home_page"
+        android:name="com.example.schoolplanner2.fragments.home_page"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_home_page_to_grades_page_frag"
+            app:destination="@id/grades_page_frag"
+            app:enterAnim="@anim/fragment_fade_enter" />
+        <action
+            android:id="@+id/action_home_page_to_chart_page"
+            app:destination="@id/chart_page"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_home_page_to_signup_page"
+            app:destination="@id/signup_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/signup_page"
+        android:name="com.example.schoolplanner2.fragments.signup_page"
+        android:label="fragment_signup_page"
+        tools:layout="@layout/fragment_signup_page" />
+    <fragment
+        android:id="@+id/new_class_page"
+        android:name="com.example.schoolplanner2.fragments.new_class_page"
+        android:label="fragment_new_class_page"
+        tools:layout="@layout/fragment_new_class_page" />
+    <fragment
+        android:id="@+id/view_course_page"
+        android:name="com.example.schoolplanner2.fragments.view_course_page"
+        android:label="fragment_view_course_page"
+        tools:layout="@layout/fragment_view_course_page" >
+        <action
+            android:id="@+id/action_view_course_page_to_new_assessment_page"
+            app:destination="@id/new_assessment_page" />
+        <action
+            android:id="@+id/action_view_course_page_to_view_assessment_page"
+            app:destination="@id/view_assessment_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_assessment_page"
+        android:name="com.example.schoolplanner2.fragments.new_assessment_page"
+        android:label="fragment_new_assessment_page"
+        tools:layout="@layout/fragment_new_assessment_page" />
+    <fragment
+        android:id="@+id/view_assessment_page"
+        android:name="com.example.schoolplanner2.fragments.view_assessment_page"
+        android:label="fragment_view_assessment_page"
+        tools:layout="@layout/fragment_view_assessment_page" />
+</navigation>

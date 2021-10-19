@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/course_color_circle.xml" value="0.5703125" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/course_header_background.xml" value="0.5703125" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/grades_page_course_header_background.xml" value="0.5703125" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/activity_main.xml" value="0.4338768115942029" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/assessment_adapter_view.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/course_adapter_view.xml" value="0.33" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_chart_page.xml" value="0.4338768115942029" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_grades_page.xml" value="0.427536231884058" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_grades_page_frag.xml" value="0.4338768115942029" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_home_page.xml" value="0.4338768115942029" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_new_assessment_page.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_new_class_page.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_signup_page.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_view_assessment_page.xml" value="0.33" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_view_course_page.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/data_spot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.home_page"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="home page" />
+
+    <Button
+        android:id="@+id/to_grades_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Grades" />
+
+    <Button
+        android:id="@+id/to_chart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Chart" />
+
+    <Button
+        android:id="@+id/save_data_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save" />
+
+    <Button
+        android:id="@+id/read_data_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="read" />
+
+    <Button
+        android:id="@+id/to_signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up page" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nothing yet" />
+
+</LinearLayout>
