@@ -116,8 +116,20 @@
         android:id="@+id/course_view_assessment_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
-    </ListView>
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Graded Assessments"/>
+
+    <ListView
+        android:id="@+id/course_view_graded_assessment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/course_view_add_assessment"

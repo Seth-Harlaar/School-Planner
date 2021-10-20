@@ -17,8 +17,10 @@ import com.example.schoolplanner2.R;
 import com.example.schoolplanner2.activities.MainActivity;
 import com.example.schoolplanner2.adapters.AssessmentListAdapter;
 import com.example.schoolplanner2.adapters.CourseListAdapter;
+import com.example.schoolplanner2.adapters.GradedAssessmentListAdapter;
 import com.example.schoolplanner2.models.Assessment;
 import com.example.schoolplanner2.models.Course;
+import com.example.schoolplanner2.models.GradedAssessment;
 import com.example.schoolplanner2.models.Student;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
@@ -82,25 +84,28 @@ public class view_course_page extends Fragment {
 
 
     // find textview and set info
-    final TextView codeTv = v.findViewById(R.id.course_view_page_code);
+    final TextView codeTv       = v.findViewById(R.id.course_view_page_code);
+    final TextView gradeTv      = v.findViewById(R.id.course_view_page_grade);
+    final TextView titleTv      = v.findViewById(R.id.course_view_page_title);
+    final TextView absGradeTv   = v.findViewById(R.id.course_view_page_abs_grade);
+
     codeTv.setText(course_code);
-
-    final TextView gradeTv = v.findViewById(R.id.course_view_page_grade);
     gradeTv.setText(course_grade);
-
-    final TextView titleTv = v.findViewById(R.id.course_view_page_title);
     titleTv.setText(course_title);
-
-    final TextView absGradeTv = v.findViewById(R.id.course_view_page_abs_grade);
     absGradeTv.setText(course_abs_grade);
 
-    ArrayList<Assessment> assessments = course.getAssessmentList();
+    ArrayList<GradedAssessment> gradedAssessments  = course.getGradedAssessmentList();
+    ArrayList<Assessment> assessments              = course.getAssessmentList();
 
     // get the list view and add each course to the course view
     ListView assessment_list_view = (ListView) v.findViewById(R.id.course_view_assessment_list);
-
     AssessmentListAdapter assessAdapter = new AssessmentListAdapter(getContext(), R.layout.assessment_adapter_view, assessments, course);
     assessment_list_view.setAdapter(assessAdapter);
+
+    ListView gradedAssessmentListView = (ListView) v.findViewById(R.id.course_view_graded_assessment_list);
+    GradedAssessmentListAdapter gradedAdapter = new GradedAssessmentListAdapter(getContext(), R.layout.graded_adapter_view, gradedAssessments, course);
+    gradedAssessmentListView.setAdapter(gradedAdapter);
+
 
     return v;
   }
