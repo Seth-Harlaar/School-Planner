@@ -9,6 +9,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.schoolplanner2.R;
@@ -60,6 +61,17 @@ public class view_assessment_page extends Fragment {
                            Bundle savedInstanceState) {
     // Inflate the layout for this fragment
     View v = inflater.inflate(R.layout.fragment_view_assessment_page, container, false);
+
+    final Button input_button = v.findViewById(R.id.assessment_view_input_grade);
+    input_button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // go to submit grade page
+        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+        submit_grade submit_grade_frag = submit_grade.newInstance(assessment, course);
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, submit_grade_frag).addToBackStack(null).commit();
+      }
+    });
 
     // add another class button
     final FloatingActionButton grades_add_class_button2 = v.findViewById(R.id.assessment_view_edit_assessment);

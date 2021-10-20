@@ -70,5 +70,14 @@
         android:id="@+id/view_assessment_page"
         android:name="com.example.schoolplanner2.fragments.view_assessment_page"
         android:label="fragment_view_assessment_page"
-        tools:layout="@layout/fragment_view_assessment_page" />
+        tools:layout="@layout/fragment_view_assessment_page" >
+        <action
+            android:id="@+id/action_view_assessment_page_to_submit_grade"
+            app:destination="@id/submit_grade" />
+    </fragment>
+    <fragment
+        android:id="@+id/submit_grade"
+        android:name="com.example.schoolplanner2.fragments.submit_grade"
+        android:label="fragment_submit_grade"
+        tools:layout="@layout/fragment_submit_grade" />
 </navigation>

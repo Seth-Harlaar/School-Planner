@@ -124,9 +124,15 @@ public class new_assessment_page extends Fragment {
       titleEditText.setText(oldTitle);
       descEditText.setText(oldDescription);
       weightEditText.setText(String.valueOf(oldWeight));
-      ((RadioButton)importanceGroup.getChildAt(oldImportance - 1)).setChecked(true);
-      ((RadioButton)statusGroup.getChildAt(oldStatus - 1)).setChecked(true);
-      ((RadioButton)typeGroup.getChildAt(oldType - 1)).setChecked(true);
+      if(oldImportance > 0){
+        ((RadioButton)importanceGroup.getChildAt(oldImportance - 1)).setChecked(true);
+      }
+      if(oldStatus > 0){
+        ((RadioButton)statusGroup.getChildAt(oldStatus - 1)).setChecked(true);
+      }
+      if(oldType > 0){
+        ((RadioButton)typeGroup.getChildAt(oldType - 1)).setChecked(true);
+      }
     }
 
     // on submit
@@ -151,15 +157,13 @@ public class new_assessment_page extends Fragment {
         // make new assessment
         Assessment newAssessment = new Assessment(input_title, input_description, input_weight, input_urgency, input_importance, input_status, input_type, "");
 
-        ArrayList<Assessment> assessments = course.getAssessmentList();
-
         // if in edit mode, first remove the old assessment
         if(mode == 1){
-          assessments.remove(assessment);
+          course.removeAssessment(assessment);
         }
 
-        // add new assessment to course assessment list
-        assessments.add(newAssessment);
+        // add new assessment to course
+        course.addAssessment(newAssessment);
 
         // go back to the assessment view of the new assessment made
         AppCompatActivity activity = (AppCompatActivity) view.getContext();

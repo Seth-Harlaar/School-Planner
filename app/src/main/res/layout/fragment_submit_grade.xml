@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.submit_grade"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <EditText
+        android:id="@+id/submit_grade_final_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="20dp"
+        android:hint="Final Grade" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/submit_grade_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Switch" />
+
+    <EditText
+        android:id="@+id/submit_grade_ach_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="20dp"
+        android:hint="Achieved Score" />
+
+    <EditText
+        android:id="@+id/submit_grade_max_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="20dp"
+        android:hint="Maximum Score" />
+
+    <Button
+        android:id="@+id/submit_grade_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+
+</LinearLayout>
