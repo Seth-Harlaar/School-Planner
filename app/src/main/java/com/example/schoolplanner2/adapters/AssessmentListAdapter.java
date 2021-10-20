@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.schoolplanner2.R;
 import com.example.schoolplanner2.fragments.view_assessment_page;
-import com.example.schoolplanner2.fragments.view_course_page;
 import com.example.schoolplanner2.models.Assessment;
 import com.example.schoolplanner2.models.Course;
 
@@ -24,11 +23,13 @@ public class AssessmentListAdapter extends ArrayAdapter<Assessment> {
 
   private Context context;
   int mResource;
+  private Course course;
 
-  public AssessmentListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Assessment> objects) {
+  public AssessmentListAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Assessment> objects, Course input_course) {
     super(context, resource, objects);
     this.context = context;
     mResource = resource;
+    course = input_course;
   }
 
   public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -43,7 +44,7 @@ public class AssessmentListAdapter extends ArrayAdapter<Assessment> {
 
         // go to the assessment view page for the assess clicked on
         AppCompatActivity activity = (AppCompatActivity) view.getContext();
-        view_assessment_page view_assessment_frag = view_assessment_page.newInstance(getItem(position));
+        view_assessment_page view_assessment_frag = view_assessment_page.newInstance(getItem(position), course);
         activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, view_assessment_frag).addToBackStack(null).commit();
       }
     });

@@ -103,7 +103,7 @@ public class grades_page extends Fragment {
 
 
     // get the list view and add each course to the course view
-    ListView courses_list_view = (ListView) v.findViewById(R.id.grades_page_list);
+    ListView courses_list_view = v.findViewById(R.id.grades_page_list);
 
     CourseListAdapter courseAdapter = new CourseListAdapter(getContext(), R.layout.course_adapter_view, courses );
     courses_list_view.setAdapter(courseAdapter);

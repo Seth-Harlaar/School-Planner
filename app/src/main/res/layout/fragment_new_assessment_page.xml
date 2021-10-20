@@ -126,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.33"
-            android:text="Most" />
+            android:text="Majority" />
 
         <RadioButton
             android:id="@+id/new_assessment_radio_finished"

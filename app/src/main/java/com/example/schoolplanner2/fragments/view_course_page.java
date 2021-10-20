@@ -69,7 +69,7 @@ public class view_course_page extends Fragment {
         // go to new fragment with course info
         // navigate to the view_course_page for the class clicked on
         AppCompatActivity activity = (AppCompatActivity) view.getContext();
-        new_assessment_page new_assessment_page_frag = new_assessment_page.newInstance(course);
+        new_assessment_page new_assessment_page_frag = new_assessment_page.newInstance(course, null, 0);
         activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new_assessment_page_frag).addToBackStack(null).commit();
       }
     });
@@ -99,7 +99,7 @@ public class view_course_page extends Fragment {
     // get the list view and add each course to the course view
     ListView assessment_list_view = (ListView) v.findViewById(R.id.course_view_assessment_list);
 
-    AssessmentListAdapter assessAdapter = new AssessmentListAdapter(getContext(), R.layout.assessment_adapter_view, assessments);
+    AssessmentListAdapter assessAdapter = new AssessmentListAdapter(getContext(), R.layout.assessment_adapter_view, assessments, course);
     assessment_list_view.setAdapter(assessAdapter);
 
     return v;
