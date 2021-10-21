@@ -60,6 +60,9 @@
         <action
             android:id="@+id/action_view_course_page_to_view_assessment_page"
             app:destination="@id/view_assessment_page" />
+        <action
+            android:id="@+id/action_view_course_page_to_view_graded_assessment_page"
+            app:destination="@id/view_graded_assessment_page" />
     </fragment>
     <fragment
         android:id="@+id/new_assessment_page"
@@ -80,4 +83,9 @@
         android:name="com.example.schoolplanner2.fragments.submit_grade"
         android:label="fragment_submit_grade"
         tools:layout="@layout/fragment_submit_grade" />
+    <fragment
+        android:id="@+id/view_graded_assessment_page"
+        android:name="com.example.schoolplanner2.fragments.view_graded_assessment_page"
+        android:label="fragment_view_graded_assessment_page"
+        tools:layout="@layout/fragment_view_graded_assessment_page" />
 </navigation>

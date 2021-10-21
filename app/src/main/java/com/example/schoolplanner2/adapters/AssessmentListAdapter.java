@@ -40,8 +40,6 @@ public class AssessmentListAdapter extends ArrayAdapter<Assessment> {
     v.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        // get assessment clicked on
-
         // go to the assessment view page for the assess clicked on
         AppCompatActivity activity = (AppCompatActivity) view.getContext();
         view_assessment_page view_assessment_frag = view_assessment_page.newInstance(getItem(position), course);

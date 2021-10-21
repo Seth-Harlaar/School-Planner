@@ -9,8 +9,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.schoolplanner2.R;
+import com.example.schoolplanner2.fragments.view_assessment_page;
+import com.example.schoolplanner2.fragments.view_graded_assessment_page;
 import com.example.schoolplanner2.models.Assessment;
 import com.example.schoolplanner2.models.Course;
 import com.example.schoolplanner2.models.GradedAssessment;
@@ -35,6 +38,16 @@ public class GradedAssessmentListAdapter extends ArrayAdapter<GradedAssessment> 
     LayoutInflater inflater = LayoutInflater.from(context);
     View v = inflater.inflate(mResource, null);
 
+    v.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // go to the graded assessment view page for the assess clicked on
+        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+        view_graded_assessment_page view_graded_assessment_frag = view_graded_assessment_page.newInstance(getItem(position), course);
+        activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, view_graded_assessment_frag).addToBackStack(null).commit();
+      }
+    });
+
     // get the info
     // title weight grade type
     String assessment_title = getItem(position).getTitle();
@@ -51,7 +64,6 @@ public class GradedAssessmentListAdapter extends ArrayAdapter<GradedAssessment> 
     tv_assessment_weight.setText(String.valueOf(assessment_weight));
     tv_assessment_status.setText(String.valueOf(assessment_grade));
     tv_assessment_type.setText(String.valueOf(assessment_type));
-
 
     return v;
     }
