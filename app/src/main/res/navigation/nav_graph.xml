@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_home_page_to_signup_page"
             app:destination="@id/signup_page" />
+        <action
+            android:id="@+id/action_home_page_to_topass_page"
+            app:destination="@id/topass_page" />
     </fragment>
     <fragment
         android:id="@+id/signup_page"
@@ -88,4 +91,9 @@
         android:name="com.example.schoolplanner2.fragments.view_graded_assessment_page"
         android:label="fragment_view_graded_assessment_page"
         tools:layout="@layout/fragment_view_graded_assessment_page" />
+    <fragment
+        android:id="@+id/topass_page"
+        android:name="com.example.schoolplanner2.fragments.topass_page"
+        android:label="fragment_topass_page"
+        tools:layout="@layout/fragment_topass_page" />
 </navigation>

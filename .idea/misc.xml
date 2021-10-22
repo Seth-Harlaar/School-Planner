@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5703125" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/course_color_circle.xml" value="0.5703125" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/course_header_background.xml" value="0.5703125" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/grades_page_course_header_background.xml" value="0.5703125" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5703125" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/activity_main.xml" value="0.4338768115942029" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/assessment_adapter_view.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/course_adapter_view.xml" value="0.33" />
@@ -17,6 +19,7 @@
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_new_class_page.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_signup_page.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_submit_grade.xml" value="0.33" />
+        <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_topass_page.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_view_assessment_page.xml" value="0.33" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_view_course_page.xml" value="0.33" />
         <entry key="..\:/Users/sjhar/AndroidStudioProjects/SchoolPlanner2/app/src/main/res/layout/fragment_view_graded_assessment_page.xml" value="0.5" />

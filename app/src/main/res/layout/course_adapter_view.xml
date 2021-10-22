@@ -17,12 +17,6 @@
         android:elevation="2dp"
         android:background="@drawable/course_header_background">
 
-        <ImageView
-            android:id="@+id/imageView"
-            app:srcCompat="@drawable/course_color_circle"
-            android:layout_width="20dp"
-            android:layout_height="20dp"/>
-
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"

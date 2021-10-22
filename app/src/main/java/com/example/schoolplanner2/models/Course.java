@@ -175,6 +175,19 @@ public class Course implements Parcelable {
     this.setAbsoluteGrade( absGrade );
   }
 
+  // calculates what grade you need on final to pass the course with your current grade and weight of final
+  public Double toPass( Double examWeight, Double targetGrade ){
+
+    Double impactGrade = targetGrade - absoluteGrade;
+
+    if( impactGrade > 0.00){
+      impactGrade = 0.00;
+    }
+
+    Double requiredGrade = impactGrade/(examWeight/100);
+
+    return requiredGrade;
+  }
 
 
   // toString

@@ -107,7 +107,14 @@ public class home_page extends Fragment {
       }
     });
 
-
+    final Button to_topass_button = v.findViewById(R.id.to_topass_button);
+    to_topass_button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // go to the to pass page
+        Navigation.findNavController(v).navigate(R.id.topass_page);
+      }
+    });
 
     // save student data
     final Button save_data_button = v.findViewById(R.id.save_data_button);
