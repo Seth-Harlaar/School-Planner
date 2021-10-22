@@ -1,11 +1,37 @@
 package com.example.schoolplanner2.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.example.schoolplanner2.models.Course;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
-public class Student {
+public class Student implements Parcelable {
+  // parcelable implementation
+  protected Student(Parcel in) {
+    courses = in.createTypedArrayList(Course.CREATOR);
+    programName = in.readString();
+    if (in.readByte() == 0) {
+      currentYear = null;
+    } else {
+      currentYear = in.readInt();
+    }
+  }
+
+  public static final Creator<Student> CREATOR = new Creator<Student>() {
+    @Override
+    public Student createFromParcel(Parcel in) {
+      return new Student(in);
+    }
+
+    @Override
+    public Student[] newArray(int size) {
+      return new Student[size];
+    }
+  };
 
   // a list of classes they're in
   private ArrayList<Course> courses = new ArrayList<Course>();
@@ -16,8 +42,10 @@ public class Student {
   // current year
   private Integer currentYear;
 
-  // event list - upcoming due dates
+  // list of notes
+  private ArrayList<Note> notes = new ArrayList<Note>();
 
+  // event list - upcoming due dates
 
 
   // constructors - must have program name, and current year
@@ -38,6 +66,17 @@ public class Student {
   }
 
 
+
+
+  // update a note function
+  // add a new note
+  public void addNote(Note inputNote){
+    this.notes.add(inputNote);
+  }
+
+
+
+
   // getters
   public ArrayList<Course> getCourses(){
     return this.courses;
@@ -49,6 +88,10 @@ public class Student {
 
   public Integer getCurrentYear(){
     return this.currentYear;
+  }
+
+  public ArrayList<Note> getNotes() {
+    return notes;
   }
 
 
@@ -63,5 +106,28 @@ public class Student {
 
   public void setCurrentYear( Integer newCurrentYear ){
     this.currentYear = newCurrentYear;
+  }
+
+  public void setNotes(ArrayList<Note> notes) {
+    this.notes = notes;
+  }
+
+  // parcelable functions
+
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  @Override
+  public void writeToParcel(Parcel parcel, int i) {
+    parcel.writeTypedList(courses);
+    parcel.writeString(programName);
+    if (currentYear == null) {
+      parcel.writeByte((byte) 0);
+    } else {
+      parcel.writeByte((byte) 1);
+      parcel.writeInt(currentYear);
+    }
   }
 }

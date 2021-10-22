@@ -41,6 +41,9 @@
         <action
             android:id="@+id/action_home_page_to_topass_page"
             app:destination="@id/topass_page" />
+        <action
+            android:id="@+id/action_home_page_to_view_notes_page"
+            app:destination="@id/view_notes_page" />
     </fragment>
     <fragment
         android:id="@+id/signup_page"
@@ -96,4 +99,18 @@
         android:name="com.example.schoolplanner2.fragments.topass_page"
         android:label="fragment_topass_page"
         tools:layout="@layout/fragment_topass_page" />
+    <fragment
+        android:id="@+id/view_notes_page"
+        android:name="com.example.schoolplanner2.fragments.view_notes_page"
+        android:label="fragment_view_notes_page"
+        tools:layout="@layout/fragment_view_notes_page" >
+        <action
+            android:id="@+id/action_view_notes_page_to_new_note_page"
+            app:destination="@id/new_note_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_note_page"
+        android:name="com.example.schoolplanner2.fragments.new_note_page"
+        android:label="fragment_new_note_page"
+        tools:layout="@layout/fragment_new_note_page" />
 </navigation>

@@ -33,6 +33,12 @@
         android:text="How much to pass" />
 
     <Button
+        android:id="@+id/to_notes_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes" />
+
+    <Button
         android:id="@+id/save_data_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
