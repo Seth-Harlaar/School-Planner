@@ -88,7 +88,7 @@ public class signup_page extends Fragment {
           // make a student class out of it
           newStudent = new Student(inputProgramName, 2);
 
-          String file_name = "studentInfo.txt";
+          String file_name = "studentInfo2.txt";
           String file_data = "some stuff is here";
 
           // get context

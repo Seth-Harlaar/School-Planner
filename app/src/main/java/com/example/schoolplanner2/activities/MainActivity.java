@@ -1,6 +1,13 @@
 package com.example.schoolplanner2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
+import androidx.navigation.NavController;
+import androidx.navigation.NavHostController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +15,7 @@ import android.os.Bundle;
 import com.example.schoolplanner2.R;
 import com.example.schoolplanner2.models.Student;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -21,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
   private Student student = null;
 
-  // on close, save data
-
+  // on create load data
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -32,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     // get context
     Context context = MainActivity.this;
 
-    String file_name = "studentInfo.txt";
+    String file_name = "studentInfo2.txt";
 
     // try open the file
     FileInputStream fis = null;
@@ -41,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     } catch (FileNotFoundException e) {
       e.printStackTrace();
       // file not found, must make it
-      String file_data = "starter data for student";
+      String file_data = "nothing";
 
       // get file and write to it
       try{
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         fos.write(file_data.getBytes());
         fos.close();
       } catch(Exception e2) {
-
+        e.printStackTrace();
       }
     } finally {
       try {
@@ -84,29 +91,34 @@ public class MainActivity extends AppCompatActivity {
 
       Student newStudent = null;
 
-      // store it in student
-      if( contents.equals("nothing") ){
-        // there was no contents read, have to make a new student
-        // navigate to the page where a new student page is
-      } else {
-        try{
-          // contents read, attempt to make a JSON object out of it
-          Gson gson = new Gson();
-          newStudent = gson.fromJson(contents, Student.class);
+      try{
+        // attempt to make a new student
+        Gson gson = new Gson();
+        newStudent = gson.fromJson(contents, Student.class);
 
-          this.student = newStudent;
-        } catch(Exception e){
-          e.printStackTrace();
+        this.student = newStudent;
+      } catch(JsonSyntaxException e){
+        e.printStackTrace();
+        NavHostFragment navHost = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        NavController navController = navHost.getNavController();
+        navController.navigate(R.id.signup_page);
+      } finally {
+        // if there is still no student
+        if(newStudent == null){
+          NavHostFragment navHost = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+          NavController navController = navHost.getNavController();
+          navController.navigate(R.id.signup_page);
         }
       }
     }
   }
 
 
-  // does not work
-  protected void onPause(Bundle savedInstanceState){
+  @Override
+  protected void onStop(){
+    super.onStop();
     // save data
-    String file_name = "studentInfo.txt";
+    String file_name = "studentInfo2.txt";
     String file_data = "some stuff is here";
 
     // get context
@@ -125,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
         fos.write(file_data.getBytes());
       } catch(Exception e) {
         // problem writing student to file
+        e.printStackTrace();
       }
     }
   }
@@ -133,3 +146,14 @@ public class MainActivity extends AppCompatActivity {
     return student;
   }
 }
+
+
+
+
+
+
+
+
+
+
+

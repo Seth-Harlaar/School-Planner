@@ -84,16 +84,6 @@ public class home_page extends Fragment {
       }
     });
 
-    // navigate to sign up page
-    final Button to_signup_button = v.findViewById(R.id.to_signup_button);
-    to_signup_button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        // go to the sign up page
-        Navigation.findNavController(v).navigate(R.id.signup_page);
-      }
-    });
-
     final Button to_topass_button = v.findViewById(R.id.to_topass_button);
     to_topass_button.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -150,7 +140,7 @@ public class home_page extends Fragment {
     read_data_button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        String file_name = "studentInfo.txt";
+        String file_name = "studentInfo2.txt";
 
         // get context
         Context context = getContext();
