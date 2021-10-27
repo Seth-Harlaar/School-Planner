@@ -4,11 +4,11 @@
     android:shape="rectangle"   >
 
     <solid
-        android:color="#FFFFFF" >
+        android:color="#F4A261" >
     </solid>
 
     <corners
-        android:radius="11dp"   >
+        android:radius="5dp"   >
     </corners>
 
 </shape>

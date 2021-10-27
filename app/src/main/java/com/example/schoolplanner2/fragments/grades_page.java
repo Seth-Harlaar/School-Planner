@@ -8,6 +8,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -76,15 +77,6 @@ public class grades_page extends Fragment {
 
     // *** button setup ***
 
-    // go back home
-    final Button home_button_grades = v.findViewById(R.id.home_button_grades);
-    home_button_grades.setOnClickListener(new View.OnClickListener() {
-      public void onClick(View view) {
-        // go back home
-        Navigation.findNavController(v).navigate(R.id.home_page);
-      }
-    });
-
     // add another class button
     final FloatingActionButton grades_add_class_button2 = v.findViewById(R.id.grades_add_class2);
     grades_add_class_button2.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +99,8 @@ public class grades_page extends Fragment {
 
     CourseListAdapter courseAdapter = new CourseListAdapter(getContext(), R.layout.course_adapter_view, courses );
     courses_list_view.setAdapter(courseAdapter);
+
+
 
     return v;
   }

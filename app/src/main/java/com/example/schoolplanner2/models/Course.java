@@ -171,6 +171,10 @@ public class Course implements Parcelable {
       System.out.println("Error calculating grades\n" + e.getMessage() );
     }
 
+    if( curGrade.isNaN()){
+      curGrade = 0.00;
+    }
+
     this.setCurrentGrade( curGrade );
     this.setAbsoluteGrade( absGrade );
   }

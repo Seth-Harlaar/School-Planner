@@ -7,12 +7,6 @@
     android:orientation="vertical"
     tools:context=".fragments.grades_page">
 
-    <Button
-        android:id="@+id/home_button_grades"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Home" />
-
     <ListView
         android:id="@+id/grades_page_list"
         android:layout_width="match_parent"

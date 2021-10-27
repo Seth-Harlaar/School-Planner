@@ -6,15 +6,9 @@
         android:radius="40dp" />
 
     <solid
-        android:color="#42f5da" />
+        android:color="#FFFFFF" />
 
     <size
         android:width="82dp"
         android:height="82dp" />
-
-
-    <stroke
-        android:width="5dp"
-        android:color="#474747" />
-
 </shape>

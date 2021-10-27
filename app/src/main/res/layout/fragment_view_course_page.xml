@@ -4,22 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.view_course_page"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_margin="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Course view page"
-        android:layout_gravity="center_horizontal"
-        />
-
+    android:orientation="vertical"
+    android:background="@drawable/base_page360x640">
 
     <!-- Title block -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/course_header_background"
+        android:layout_margin="20dp"
+        android:padding="20dp"
         >
         <!-- Title, Code, and Icon -->
         <LinearLayout
@@ -38,13 +33,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="course title" />
+                    android:textSize="50dp"
+                    android:text="course title"/>
 
                 <TextView
                     android:id="@+id/course_view_page_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:textSize="20dp"
                     android:text="course code" />
 
             </LinearLayout>
@@ -62,20 +59,24 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Current grade: "
-                android:layout_weight="0.5"/>
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/course_view_page_grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_gravity="center_horizontal"
                 android:text="course grade"
-                android:layout_weight="0.5"/>
+                />
 
         </LinearLayout>
 
@@ -89,47 +90,84 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Absolute grade: "
-                android:layout_weight="0.5"/>
+                />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/course_view_page_abs_grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_gravity="center_horizontal"
                 android:text="Absolute Grade"
-                android:layout_weight="0.5"/>
+                />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Assessments"/>
+        android:background="@drawable/course_view_assessments_header"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assessments"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight"/>
+
+    </LinearLayout>
 
 
     <ListView
         android:id="@+id/course_view_assessment_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+        android:layout_height="200dp"
+        android:background="@color/white"
+        />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Graded Assessments"/>
+        android:background="@drawable/course_view_gassessments_header"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graded Assessments"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grade"/>
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/course_view_graded_assessment_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+        android:background="@color/white"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/course_view_add_assessment"
