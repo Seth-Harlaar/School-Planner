@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/course_header_background"
+        android:background="@drawable/course_view_header"
         android:layout_margin="20dp"
         android:padding="20dp"
         >
@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:textSize="50dp"
+                    android:textSize="35dp"
                     android:text="course title"/>
 
                 <TextView
@@ -118,6 +118,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Assessments"/>
 
         <Space
@@ -127,6 +128,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Weight"/>
 
     </LinearLayout>
@@ -135,20 +137,24 @@
     <ListView
         android:id="@+id/course_view_assessment_list"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
+        android:divider="@null"
+        android:padding="10dp"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/course_view_gassessments_header"
-        android:padding="10dp"
+        android:paddingVertical="7dp"
+        android:paddingHorizontal="16dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Graded Assessments"/>
 
         <Space
@@ -158,6 +164,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
             android:text="Grade"/>
 
     </LinearLayout>
@@ -167,6 +174,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:divider="@null"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
