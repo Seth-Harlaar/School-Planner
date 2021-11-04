@@ -18,6 +18,8 @@ public class Course implements Parcelable {
     }
   };
 
+  private boolean expand = false;
+
   // Title
   private String title;
 
@@ -73,12 +75,13 @@ public class Course implements Parcelable {
 
 
   // getters
+  public boolean getExpand(){ return this.expand; }
+
   public String getCourseCode(){
     return this.courseCode;
   }
 
   public String getTitle(){ return this.title; }
-
 
   public ArrayList<Assessment> getAssessmentList( ){
     return this.assessments;
@@ -105,9 +108,19 @@ public class Course implements Parcelable {
     this.absoluteGrade = absoluteGrade;
   }
 
+  public void setExpand(boolean thing){ this.expand = thing; }
 
 
   // other functions
+  public void switchExpand(){
+    if(this.expand){
+      this.expand = false;
+    } else {
+      this.expand = true;
+    }
+  }
+
+
 
   // add assessment -> read name
   public void addAssessment( Assessment newAssessment ){

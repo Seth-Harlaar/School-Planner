@@ -51,19 +51,13 @@ public class GradedAssessmentListAdapter extends ArrayAdapter<GradedAssessment> 
     // get the info
     // title weight grade type
     String assessment_title = getItem(position).getTitle();
-    Integer assessment_weight = getItem(position).getWeight();
     Double assessment_grade = getItem(position).getFinalGrade();
-    Integer assessment_type = getItem(position).getAssessmentType();
 
     TextView tv_assessment_title = v.findViewById(R.id.graded_assessment_adapter_title);
-    TextView tv_assessment_weight = v.findViewById(R.id.graded_assessment_adapter_weight);
-    TextView tv_assessment_status = v.findViewById(R.id.graded_assessment_adapter_grade);
-    TextView tv_assessment_type = v.findViewById(R.id.graded_assessment_adapter_type);
+    TextView tv_assessment_grade = v.findViewById(R.id.graded_assessment_adapter_grade);
 
     tv_assessment_title.setText(assessment_title);
-    tv_assessment_weight.setText(String.valueOf(assessment_weight));
-    tv_assessment_status.setText(String.valueOf(assessment_grade));
-    tv_assessment_type.setText(String.valueOf(assessment_type));
+    tv_assessment_grade.setText(String.format("%s%%", String.valueOf(assessment_grade)));
 
     return v;
     }

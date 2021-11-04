@@ -2,9 +2,11 @@ package com.example.schoolplanner2.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import android.widget.ListView;
 
 import com.example.schoolplanner2.activities.MainActivity;
 import com.example.schoolplanner2.R;
+import com.example.schoolplanner2.adapters.AssessmentListAdapter;
 import com.example.schoolplanner2.models.Student;
 import com.example.schoolplanner2.adapters.CourseListAdapter;
 import com.example.schoolplanner2.models.Course;
@@ -99,8 +102,6 @@ public class grades_page extends Fragment {
 
     CourseListAdapter courseAdapter = new CourseListAdapter(getContext(), R.layout.course_adapter_view, courses );
     courses_list_view.setAdapter(courseAdapter);
-
-
 
     return v;
   }

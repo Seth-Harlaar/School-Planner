@@ -11,6 +11,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Window;
 
 import com.example.schoolplanner2.R;
 import com.example.schoolplanner2.models.Student;
