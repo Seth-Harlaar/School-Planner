@@ -74,7 +74,7 @@ public class CourseListAdapter extends ArrayAdapter<Course> {
 
     // set the code and grade
     tv_course_code.setText(course_code);
-    tv_course_grade.setText(String.valueOf(course_grade));
+    tv_course_grade.setText(String.format("%s%%", String.valueOf(course_grade)));
 
     layout.setOnClickListener(new View.OnClickListener() {
       @Override

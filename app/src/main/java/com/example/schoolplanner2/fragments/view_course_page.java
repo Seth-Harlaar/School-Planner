@@ -63,19 +63,6 @@ public class view_course_page extends Fragment {
     // Inflate the layout for this fragment
     View v = inflater.inflate(R.layout.fragment_view_course_page, container, false);
 
-    // add action to the button
-    final FloatingActionButton add_new_assessment_button = v.findViewById(R.id.course_view_add_assessment);
-    add_new_assessment_button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        // go to new fragment with course info
-        // navigate to the view_course_page for the class clicked on
-        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-        new_assessment_page new_assessment_page_frag = new_assessment_page.newInstance(course, null, 0);
-        activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new_assessment_page_frag).addToBackStack(null).commit();
-      }
-    });
-
     // get course info
     String course_code  = course.getCourseCode();
     String course_grade = String.valueOf(course.getCurrentGrade());

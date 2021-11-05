@@ -81,15 +81,13 @@ public class grades_page extends Fragment {
     // *** button setup ***
 
     // add another class button
-    final FloatingActionButton grades_add_class_button2 = v.findViewById(R.id.grades_add_class2);
+    final Button grades_add_class_button2 = v.findViewById(R.id.grades_add_class2);
     grades_add_class_button2.setOnClickListener(new View.OnClickListener() {
       public void onClick(View view) {
         // go to new class form
         Navigation.findNavController(v).navigate(R.id.new_class_page);
       }
     });
-
-
 
     // get each course
     MainActivity activity = (MainActivity) getActivity();
