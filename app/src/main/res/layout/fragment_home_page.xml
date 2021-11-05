@@ -38,22 +38,5 @@
         android:layout_height="wrap_content"
         android:text="Notes" />
 
-    <Button
-        android:id="@+id/save_data_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="save" />
-
-    <Button
-        android:id="@+id/read_data_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="read" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nothing yet" />
 
 </LinearLayout>

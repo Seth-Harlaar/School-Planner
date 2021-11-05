@@ -5,44 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.chart_page">
 
-    <!-- the chart -->
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="2"
-        android:padding="20dp">
 
-        <!-- urgent/important block-->
-        <LinearLayout>
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ListView>
-        </LinearLayout>
-
-        <LinearLayout>
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ListView>
-        </LinearLayout>
-
-        <LinearLayout>
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ListView>
-        </LinearLayout>
-
-        <LinearLayout>
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            </ListView>
-        </LinearLayout>
-
-
-    </GridLayout>
 
 </LinearLayout>

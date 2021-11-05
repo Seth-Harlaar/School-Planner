@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity"
-    android:background="@drawable/base_page360x640">
+    android:background="@color/customBackground">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
