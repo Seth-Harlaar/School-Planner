@@ -66,48 +66,5 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/assess_list_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:background="@drawable/course_body_background"
-        android:padding="20dp"
-        >
-
-        <ListView
-            android:id="@+id/course_adapter_assess_list"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginBottom="10dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/course_adapter_more_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="More" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="New"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
 
 </LinearLayout>

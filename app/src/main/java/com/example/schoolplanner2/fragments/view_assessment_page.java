@@ -74,7 +74,7 @@ public class view_assessment_page extends Fragment {
     });
 
     // add another class button
-    final FloatingActionButton grades_add_class_button2 = v.findViewById(R.id.assessment_view_edit_assessment);
+    final Button grades_add_class_button2 = v.findViewById(R.id.assessment_view_edit_assessment);
     grades_add_class_button2.setOnClickListener(new View.OnClickListener() {
       public void onClick(View view) {
         // go to edit assessment form

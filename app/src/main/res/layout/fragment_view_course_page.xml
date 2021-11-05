@@ -32,7 +32,6 @@
                     android:id="@+id/course_view_page_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:textSize="35dp"
                     android:text="course title"/>
 
@@ -40,17 +39,17 @@
                     android:id="@+id/course_view_page_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:textSize="20dp"
                     android:text="course code" />
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Icon"
-                android:layout_weight="0.33"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/course_color_circle"/>
+
+
         </LinearLayout>
 
         <!-- Absolute Grade -->
@@ -63,8 +62,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Current grade: "
-                />
+                android:layout_marginTop="5dp"
+                android:text="Current grade: "/>
 
             <Space
                 android:layout_width="wrap_content"
@@ -75,8 +74,7 @@
                 android:id="@+id/course_view_page_grade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="course grade"
-                />
+                android:text="course grade"/>
 
         </LinearLayout>
 
@@ -147,7 +145,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:text="6 total"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="10dp"
                     android:textColor="@color/white"/>
 
                 <Button
@@ -162,7 +160,7 @@
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.2"/>
+            android:layout_weight="0.5"/>
 
         <!-- Graded Assessments block -->
         <LinearLayout
